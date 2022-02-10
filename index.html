@@ -1,0 +1,115 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Dívidas</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+</head>
+<body>
+    <!--Estilo que retira a barra de rolagem -->
+    <style>
+       html, body{ 
+            height: 100%;
+            overflow: hidden
+        }
+    </style>
+    <div id="header"><h1>Gerenciador de Orçamento</h1></div>
+        
+    <div id="box_container">
+        <div id="box_menu"><h2>Adicionar Registros</h2></div>
+            
+            <form id="form">
+                <table id="tab_add">
+                    <tr>
+                        <td><label>Mês</label></td><td><select name="mes_referente" required id="mes_referente">
+                            <option value="" ></option>
+                            <option value="Janeiro">Janeiro</option>
+                            <option value="Fevereiro">Fevereiro</option>
+                            <option value="Marco">Março</option>
+                            <option value="Abril">Abril</option>
+                            <option value="Maio">Maio</option>
+                            <option value="Junho">Junho</option>
+                            <option value="Julho">Julho</option>
+                            <option value="Agosto">Agosto</option>
+                            <option value="Setembro">Setembro</option>
+                            <option value="Outubro">Outubro</option>
+                            <option value="Novembro">Novembro</option>
+                            <option value="Dezembro">Dezembro</option>
+                            </select></td>
+                    <tr>
+                        <td><label>Aluguel</label></td><td><input type="text" placeholder='0.00' name="aluguel" id="aluguel" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Check especial</label></td><td><input type="text" placeholder='0.00' name="check_especial" id="check_especial" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Faculdade</label></td><td><input type="text" placeholder='0.00' name="faculdade" id="faculdade" required></td>
+                    </tr>
+                    <tr>
+                         <td><label>Claro</label></td><td><input type="text" placeholder='0.00' name="claro" id="claro" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Pernambucanas</label></td><td><input type="text" placeholder='0.00' name="pernambucanas" id="pernambucanas" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Inergia</label></td><td><input type="text" placeholder='0.00' name="inergia" id="inergia" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Bradescard</label></td><td><input type="text" placeholder='0.00' name="bradescard" id="bradescard" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Taxa de Obra</label></td><td><input type="text" placeholder='0.00' name="taxa_de_obra" id="taxa_de_obra" required></td>
+                    </tr>
+                    <tr>
+                        <td><label>Parcela da casa(em cosntrução)</label></td><td><input type="text" placeholder='0.00' name="parcela_casa" id="parcela_casa" required></td>
+                    </tr>
+                </table>
+                        <input type="submit" value="✔ Salvar" id="btnEnviar" onmouseover="botao_over()" onmouseout="botao_oult()" onclick="set_dados()">
+            </form>
+            <a href="#content" id="link_pag"><b> ⌛Consultar</b></a>
+    </div>
+    
+
+   <!-- div de consulta de dados -->
+    
+    
+    <div id="content">
+    <div id="box_menu_consulta"><h2>Consulta de Valores</h2></div>
+    <div id="box_container_consulta">
+
+        <!--Logica da p´rogrmação em php-->
+        
+    </div>
+    
+    <a id="link_pag" href="view/consulta_registros.php"><b> ⌸ Listar tudo</b></a>
+    <a id="link_pag" href="#header"><b> ⇱ Adicionar Registro</b></a>
+    <a id="link_pag" href="#" onclick="open_calc()"><b>Calcular</b></a>
+   
+    <div id="box_soma">
+    <h1 id="resultado">Resultado</h1>
+    <div id="fechar" onclick="fechar_jan()"><h4>X</h4></div>
+    <input type="number" placeholder="digite o seu provento" id="inputSomar" onkeydown="hab_botao()">
+    <input type="submit" value="Calcular" id="btnSomar">Calcular</button>
+    
+</div>
+<br>
+    
+
+        
+
+ 
+    
+
+   
+    <footer id="footer"></footer>
+    <script src="js/main.js"></script>
+    
+</body>
+</html>
