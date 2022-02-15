@@ -14,12 +14,7 @@
 </head>
 <body>
     <!--Estilo que retira a barra de rolagem -->
-    <style>
-       html, body{ 
-            height: 100%;
-            overflow: hidden
-        }
-    </style>
+    
     <div id="header"><h1>Gerenciador de Orçamento</h1></div>
         
     <div id="box_container">
@@ -44,34 +39,34 @@
                             <option value="Dezembro">Dezembro</option>
                             </select></td>
                     <tr>
-                        <td><label>Aluguel</label></td><td><input type="text" placeholder='0.00' name="aluguel" id="aluguel" required></td>
+                        <td><label>Aluguel</label></td><td><input type="text" placeholder='0.00' name="aluguel" id="aluguel" ></td>
                     </tr>
                     <tr>
-                        <td><label>Check especial</label></td><td><input type="text" placeholder='0.00' name="check_especial" id="check_especial" required></td>
+                        <td><label>Check especial</label></td><td><input type="text" placeholder='0.00' name="check_especial" id="check_especial" ></td>
                     </tr>
                     <tr>
-                        <td><label>Faculdade</label></td><td><input type="text" placeholder='0.00' name="faculdade" id="faculdade" required></td>
+                        <td><label>Faculdade</label></td><td><input type="text" placeholder='0.00' name="faculdade" id="faculdade" ></td>
                     </tr>
                     <tr>
-                         <td><label>Claro</label></td><td><input type="text" placeholder='0.00' name="claro" id="claro" required></td>
+                         <td><label>Claro</label></td><td><input type="text" placeholder='0.00' name="claro" id="claro" ></td>
                     </tr>
                     <tr>
-                        <td><label>Pernambucanas</label></td><td><input type="text" placeholder='0.00' name="pernambucanas" id="pernambucanas" required></td>
+                        <td><label>Pernambucanas</label></td><td><input type="text" placeholder='0.00' name="pernambucanas" id="pernambucanas" ></td>
                     </tr>
                     <tr>
-                        <td><label>Inergia</label></td><td><input type="text" placeholder='0.00' name="inergia" id="inergia" required></td>
+                        <td><label>Inergia</label></td><td><input type="text" placeholder='0.00' name="inergia" id="inergia" ></td>
                     </tr>
                     <tr>
-                        <td><label>Bradescard</label></td><td><input type="text" placeholder='0.00' name="bradescard" id="bradescard" required></td>
+                        <td><label>Bradescard</label></td><td><input type="text" placeholder='0.00' name="bradescard" id="bradescard" ></td>
                     </tr>
                     <tr>
-                        <td><label>Taxa de Obra</label></td><td><input type="text" placeholder='0.00' name="taxa_de_obra" id="taxa_de_obra" required></td>
+                        <td><label>Taxa de Obra</label></td><td><input type="text" placeholder='0.00' name="taxa_de_obra" id="taxa_de_obra" ></td>
                     </tr>
                     <tr>
-                        <td><label>Parcela da casa(em cosntrução)</label></td><td><input type="text" placeholder='0.00' name="parcela_casa" id="parcela_casa" required></td>
+                        <td><label>Parcela da casa(em cosntrução)</label></td><td><input type="text" placeholder='0.00' name="parcela_casa" id="parcela_casa" ></td>
                     </tr>
                 </table>
-                        <input type="submit" value="✔ Salvar" id="btnEnviar" onmouseover="botao_over()" onmouseout="botao_oult()" onclick="set_dados()">
+                        <button id="btnEnviar" onmouseover="botao_over()" onmouseout="botao_oult()" onclick="set_dados()"> ✔ Salvar</button>
             </form>
             <a href="#content" id="link_pag"><b> ⌛Consultar</b></a>
     </div>
@@ -83,15 +78,50 @@
     <div id="content">
     <div id="box_menu_consulta"><h2>Consulta de Valores</h2></div>
     <div id="box_container_consulta">
+        consulta aqui
+        <table id="tab_consulta">
+            <tr>
+                <td><label>Mês</label></td><td><label id="set_mes" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Aluguel</label></td><td><label id="set_aluguel" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Check especial</label></td><td><label  id="set_check" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Faculdade</label></td><td><label  id="set_faculdade" class="label_consult"></td>
+            </tr>
+            <tr>
+                 <td><label>Claro</label></td><td><label  id="set_claro" ></td>
+            </tr>
+            <tr>
+                <td><label>Pernambucanas</label></td><td><label  id="set_pernambucanas" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Inergia</label></td><td><label  id="set_inergia" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Bradescard</label></td><td><label  id="set_bradescard" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Taxa de Obra</label></td><td><label  id="set_taxa_de_obra" class="label_consult"></td>
+            </tr>
+            <tr>
+                <td><label>Parcela da casa(em cosntrução)</label></td><td><label  id="set_parcela_casa" class="label_consult"></td>
+            </tr>
 
+            <table>
+                <br><br>
         <!--Logica da p´rogrmação em php-->
         
     </div>
+    </div>
+    <br>
     
-    <a id="link_pag" href="view/consulta_registros.php"><b> ⌸ Listar tudo</b></a>
     <a id="link_pag" href="#header"><b> ⇱ Adicionar Registro</b></a>
     <a id="link_pag" href="#" onclick="open_calc()"><b>Calcular</b></a>
-   
+   <br>
     <div id="box_soma">
     <h1 id="resultado">Resultado</h1>
     <div id="fechar" onclick="fechar_jan()"><h4>X</h4></div>
@@ -108,7 +138,7 @@
     
 
    
-    <footer id="footer"></footer>
+
     <script src="main.js"></script>
     
 </body>
